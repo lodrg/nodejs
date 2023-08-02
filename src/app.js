@@ -1,5 +1,16 @@
-//const {v4:uuid} = equire('uuid')
-     
-import {v4 as uuidv4} from 'uuid'
+const express = require('express');
+const app = express();
 
-console.log(uuidv4())
+const PORT = 3000;
+
+app.get('/', (req, res ) => {
+    res.send('Hello Kitty!')
+});
+
+app.post('/', (req, res) => {
+    res.send('This is post request! haha')
+});
+
+app.listen(PORT, () => {
+    console.log('App listening on port ' + PORT);
+});
